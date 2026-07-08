@@ -1,29 +1,32 @@
 import React from 'react'
-import {Project} from '../constants/Projects'
+import { Project } from '../constants/Projects'
 
 function Projects() {
   return (<>
-      <div classname=" ">
-        <div className="pt-16 ">
-          <h1 className='text-center p-4'>projects</h1>
-          <div className="grid grid-cols-3 border-2 border-gray-400 p-4 m-3">
-            {
-              Project.map((proj) => (
-                <div className='border-2 border-gray-400 p-4 m-2 rounded-sm text-center' key={proj.id}>
-                  <img src={proj.image} alt={proj.title} className=' ' />
 
-                  <div>
-                    <h2>{proj.title}</h2>
-                    <p>{proj.desc}</p>
-                  </div>
-
-                </div>
-              ))
-            }
-          </div>
-        </div>
+    <div className="flex flex-col relative top-20 gap-12 bg-amber-100 p-8">
+      <div >
+        <h1 className='flex justify-center bottom-0 left-0 right-0  top-10 font-bold text-green-500 mt-8 md:mt-8 text-4xl'>
+          projects
+        </h1>
       </div>
-    </>
+      <div className="grid grid-cols-1 md:grid-cols-4 border-2 border-gray-400 p-4 m-2">
+        {
+          Project.map((proj) => (
+            <div className='border-2 border-gray-400 bg-green-400 p-4 m-2 rounded-sm text-center' key={proj.id}>
+              <img src={proj.img} alt={proj.title} className='rounded-md '/>
+
+              <div>
+                <h2 className='text-white mt-4'>{proj.title}</h2>
+                <p>{proj.desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+  </>
   )
 }
 

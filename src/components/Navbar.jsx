@@ -13,13 +13,17 @@ function Navbar() {
     path: "./about"
   },
   {
+    name: "Projects",
+    path: "./project"
+  },
+  {
     name: "Contact",
     path: "./contact"
   },
   ]
   return (<>
-    <nav className='bg-slate-500 text-white  fixed w-full '>
-      <div className='flex justify-between items-center bg-red-00 h-20 md:h-20 p-2'>
+    <nav className='bg-slate-500 text-white fixed w-full z-10 '>
+      <div className='flex justify-between items-center h-20 md:h-20 p-2 '>
 
         <NavLink to="/" className="flex items-center font-bold text-xl">
           <img src="navlogo.jpeg" alt="logo" className='h-13 w-13 p-1 m-1 rounded-full' />
@@ -30,28 +34,26 @@ function Navbar() {
           {open ? <HiOutlineX /> : <HiOutlineMenu />}
         </button>
 
-        <ul className='md:flex hidden gap-4 mr-10 font-bold items-center'>
-          {navLinks.map((link, index) => (
-            <li key={index} className='hover:scale-110 transition duration-200 ease-in-out'>
-              <Link to={link.path}>{link.name}</Link>
-            </li>
-          ))}
-        </ul>
+          <ul className='md:flex hidden gap-4 mr-10 font-bold items-center'>
+            {navLinks.map((link, index) => (
+              <li key={index} className='hover:scale-110 transition duration-200 ease-in-out'>
+                <Link to={link.path}>{link.name}</Link>
+              </li>
+            ))}
+          </ul>
       </div>
 
-      <div className='md:hidden flex justify-end border-2 p-2 mb-0.5 '>
         {open &&
-          <ul className='flex flex-col items-end gap-4 mr-0.5 font-bold  text-white'>
-           
-              {navLinks.map((link, index) => (
-                <li key={index} className='hover:scale-110 transition duration-200 ease-in-out'>
-                  <Link onClick={()=>setOpen(false)} to={link.path}>{link.name}</Link>
-                </li> //onClick={()=>setopen(!open)} is used to close the menu when a link is clicked.
-              ))}
-            
+          <ul className='flex flex-col border-2 w-20 p-3 m-1 items-start gap-4 mr-0.5 font-bold  text-white'>
+
+            {navLinks.map((link, index) => (
+              <li key={index} className='hover:scale-110 transition duration-200 ease-in-out'>
+                <Link onClick={() => setOpen(false)} to={link.path}>{link.name}</Link>
+              </li> //onClick={()=>setopen(!open)} is used to close the menu when a link is clicked.
+            ))}
+
           </ul>
-        }
-      </div>
+        }     
     </nav>
   </>)
 }
