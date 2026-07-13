@@ -26,8 +26,8 @@ function Navbar() {
       <div className='flex justify-between items-center h-20 md:h-20 p-2 '>
 
         <NavLink to="/" className="flex items-center font-bold text-xl">
-          <img src="navlogo.jpeg" alt="logo" className='h-13 w-13 p-1 m-1 rounded-full' />
-          <h1>Newo</h1>
+          <img src="navlogo.jpg" alt="logo" className='h-13 w-13 p-1 m-1 rounded-full' />
+          <h1>Navin</h1>
         </NavLink>
 
         <button onClick={() => setOpen(!open)} className='font-bold md:hidden bg-blue-400 p-2 hover:scale-110 transition duration-500 ease-in-out m-2'>
@@ -44,7 +44,7 @@ function Navbar() {
       </div>
 
         {open &&
-          <ul className='flex flex-col border-2 w-20 p-3 m-1 items-start gap-4 mr-0.5 font-bold  text-white'>
+          <ul className='flex flex-col w-20 p-3 m-1 items-start gap-4 mr-0.5 font-bold  text-white'>
 
             {navLinks.map((link, index) => (
               <li key={index} className='hover:scale-110 transition duration-200 ease-in-out'>

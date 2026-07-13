@@ -3,13 +3,13 @@ import React from 'react'
 function Contact() {
   return (
     <>
-      <div className='flex flex-col items-center justify-center min-h-screen bg-gray-100 gap-12'>
+      <div className='flex flex-col items-center justify-center min-h-screen bg-slate-200 gap-12'>
         <div>
           <h1 className='font-bold text-green-500 text-4xl mt-20 '>
-            Contact Us
+            Contact us
           </h1>
         </div>
-        <form className='flex flex-col w-full max-w-md border-2 border-gray-900 rounded-2xl space-y-4 p-4'>
+        <form className='flex flex-col w-full max-w-md border-2 border-gray-900 rounded-2xl space-y-4 p-4 m-2'>
           <h1 className='font-bold text-xl text-center text-green-500'>Hi, how can i help you?</h1>
 
           <div className='flex-col flex '>
@@ -18,7 +18,7 @@ function Contact() {
           </div>
 
           <div className='flex flex-col'>
-            <label>Email :</label>
+            <label>E-mail :</label>
             <input type="email" placeholder='Email' required className='border-2 border-gray-300 p-1 rounded-sm' />
           </div>
 

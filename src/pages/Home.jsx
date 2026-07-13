@@ -12,7 +12,6 @@ function Home() {
         <About />
         <Projects />
         <Contact />
-
       </div>
 
     </>

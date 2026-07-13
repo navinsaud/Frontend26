@@ -4,10 +4,10 @@ import { Project } from '../constants/Projects'
 function Projects() {
   return (<>
 
-    <div className="flex flex-col relative top-20 gap-12 bg-amber-100 p-8">
+    <div className="flex flex-col relative gap-12 bg-amber-100 p-10">
       <div >
-        <h1 className='flex justify-center bottom-0 left-0 right-0  top-10 font-bold text-green-500 mt-8 md:mt-8 text-4xl'>
-          projects
+        <h1 className='flex justify-center top-10 font-bold text-green-500 mt-10 md:mt-8 text-4xl'>
+          Projects
         </h1>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-4 border-2 border-gray-400 p-4 m-2">
